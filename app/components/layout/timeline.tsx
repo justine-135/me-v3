@@ -39,7 +39,7 @@ const TimelineItemTitle = ({
   if (url)
     return (
       <Link
-        className="flex items-center gap-1 ml-1 hover:underline"
+        className="flex items-center gap-1 hover:underline"
         href={url || ""}
         target="_blank"
       >
