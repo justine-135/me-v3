@@ -5,10 +5,11 @@ import clsx from "clsx";
 interface Props {
   children: React.ReactNode;
   type?: TextType;
+  className?: string;
 }
 
-export default function Text({ children, type = "default" }: Props) {
+export default function Text({ children, type = "default", className }: Props) {
   const textStyle = type === "default" ? "opacity-70" : "opacity-50";
 
-  return <p className={clsx("text-sm", textStyle)}>{children}</p>;
+  return <p className={clsx(`text-sm ${className}`, textStyle)}>{children}</p>;
 }

@@ -6,20 +6,33 @@ import Heading from "./typography/heading";
 import Card from "./card";
 import { Timeline } from "./layout/timeline";
 import Text from "./typography/text";
-import GlowingCircle from "./glowing-circle";
-import { useState } from "react";
+import PortalModal from "./portal-modal";
+import { useEffect, useState } from "react";
+import { FaComment } from "react-icons/fa6";
 
-interface ILookButton {
-  isOpen: boolean;
-  onOpenPortal: () => void;
-}
+const LookButton = ({ onOpenPortal }: { onOpenPortal: () => void }) => {
+  const [showMessage, setShowMessage] = useState(false);
 
-const LookButton = ({ isOpen, onOpenPortal }: ILookButton) => {
-  if (!isOpen) return <></>;
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setShowMessage((prev) => !prev);
+    }, 6000);
+
+    return () => clearInterval(interval);
+  }, []);
   return (
-    <button className="LookButton" onClick={onOpenPortal}>
+    <button
+      className="LookButton fixed bottom-10 right-20 flex"
+      onClick={onOpenPortal}
+    >
+      {showMessage && (
+        <>
+          <Heading className="text-black translate-x-10 z-10">Look</Heading>
+          <FaComment className="scale-x-[-1] -translate-y-5" size={60} />
+        </>
+      )}
       <Image
-        className="fixed bottom-10 right-20 hover:cursor-pointer"
+        className="hover:cursor-pointer"
         alt="black dog spinning Sticker by 157ofgemma"
         src="/images/dog_spinning.webp"
         unoptimized
@@ -36,27 +49,23 @@ export default function Home() {
 
   const onOpenPortal = () => {
     setOpenPortal(true);
-    if (typeof window != "undefined" && window.document) {
-      document.body.style.overflow = "hidden";
-    }
+    document.body.style.overflow = "hidden";
   };
 
   const onClosePortal = () => {
     setOpenPortal(false);
-    if (typeof window != "undefined" && window.document) {
-      document.body.style.overflow = "auto";
-    }
+    document.body.style.overflow = "auto";
   };
 
   return (
     <>
-      <GlowingCircle isOpen={openPortal} closePortal={onClosePortal} />
+      <PortalModal isOpen={openPortal} closePortal={onClosePortal} />
       <main
         className={`MainWrapper relative flex justify-center w-full ${
           openPortal ? "blur-sm" : ""
         }`}
       >
-        <LookButton isOpen={!openPortal} onOpenPortal={onOpenPortal} />
+        {!openPortal && <LookButton onOpenPortal={onOpenPortal} />}
         <div className="Main flex flex-col gap-8 w-1/3 mt-24 mb-24">
           <div className="Profile">
             <Heading type="h1" bold>

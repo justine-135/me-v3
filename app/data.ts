@@ -70,3 +70,18 @@ export const Socials: ITimelineData[] = [
     title: "justine-135",
   },
 ];
+
+export const Portfolios = [
+  {
+    id: 1,
+    title: "v1",
+    src: "me-v2.png",
+    url: "https://justine-135.github.io/me-v2/",
+  },
+  {
+    id: 2,
+    title: "v2",
+    src: "me-v2.png",
+    url: "https://justine-135.github.io/me-v2/",
+  },
+];
