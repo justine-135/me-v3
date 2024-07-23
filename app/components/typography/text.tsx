@@ -1,5 +1,5 @@
 import React from "react";
-import { TextType } from "@/app/types/text";
+import { TextType } from "@/app/lib/types/text";
 import clsx from "clsx";
 
 interface Props {

@@ -1,4 +1,4 @@
-import { IDevData, ITimelineData } from "./types/data";
+import { IDevData, ITimelineData } from "./lib/types/data";
 
 export const Dev: IDevData = {
   name: "Justine Upano",

@@ -1,4 +1,4 @@
-import { ITimelineData } from "@/app/types/data";
+import { ITimelineData } from "@/app/lib/types/data";
 import Text from "../typography/text";
 import Heading from "../typography/heading";
 import Card from "../card";
@@ -12,7 +12,7 @@ interface ITimelineProps {
 }
 
 interface ITimelineLabelProps {
-  timeFrom: string;
+  timeFrom?: string;
   timeTo?: string;
 }
 
@@ -67,7 +67,7 @@ export const Timeline = ({ title, dataSource }: ITimelineProps) => {
               <div className="flex">
                 <div className="min-w-36">
                   <TimelineLabel
-                    timeFrom={timeline.label1}
+                    timeFrom={timeline?.label1}
                     timeTo={timeline?.label2}
                   />
                 </div>

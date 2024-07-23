@@ -9,6 +9,11 @@ import Text from "./typography/text";
 import PortalModal from "./portal-modal";
 import { useEffect, useState } from "react";
 import { FaComment } from "react-icons/fa6";
+import { ITimelineData } from "../lib/types/data";
+import useDataSWR from "../lib/hook/useDataSWR";
+import { PortfolioSection } from "../lib/enums/data";
+import { PortfolioSectionValue } from "../lib/constants/data";
+import { motion } from "framer-motion";
 
 const LookButton = ({ onOpenPortal }: { onOpenPortal: () => void }) => {
   const [showMessage, setShowMessage] = useState(false);
@@ -47,6 +52,8 @@ export default function Home() {
   const [openPortal, setOpenPortal] = useState<boolean>(false);
   const { name, title, description } = Dev;
 
+  const { data, isLoading } = useDataSWR();
+
   const onOpenPortal = () => {
     setOpenPortal(true);
     document.body.style.overflow = "hidden";
@@ -57,15 +64,17 @@ export default function Home() {
     document.body.style.overflow = "auto";
   };
 
+  if (isLoading) return "Loading";
+
   return (
     <>
-      <PortalModal isOpen={openPortal} closePortal={onClosePortal} />
+      {/* <PortalModal isOpen={openPortal} closePortal={onClosePortal} /> */}
       <main
         className={`MainWrapper relative flex justify-center w-full ${
           openPortal ? "blur-sm" : ""
         }`}
       >
-        {!openPortal && <LookButton onOpenPortal={onOpenPortal} />}
+        {/* {!openPortal && <LookButton onOpenPortal={onOpenPortal} />} */}
         <div className="Main flex flex-col gap-8 w-1/3 mt-24 mb-24">
           <div className="Profile">
             <Heading type="h1" bold>
@@ -73,21 +82,27 @@ export default function Home() {
             </Heading>
             <Text>{title}</Text>
           </div>
-
           <Card title={<Heading bold>About</Heading>} body={description} />
-
-          <Timeline
-            title={<Heading bold>Work experience</Heading>}
-            dataSource={WorkExperience}
-          />
-          <Timeline
-            title={<Heading bold>Projects</Heading>}
-            dataSource={Projects}
-          />
-          <Timeline
-            title={<Heading bold>Links</Heading>}
-            dataSource={Socials}
-          />
+          {data
+            ?.filter(
+              (item) =>
+                item.section !==
+                PortfolioSectionValue[PortfolioSection.PORTFOLIOS]
+            )
+            .map((item, key) => {
+              return (
+                <div key={key}>
+                  <Timeline
+                    title={
+                      <Heading bold className="capitalize">
+                        {item.section}
+                      </Heading>
+                    }
+                    dataSource={item.result}
+                  />
+                </div>
+              );
+            })}
         </div>
       </main>
     </>
