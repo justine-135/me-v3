@@ -43,8 +43,10 @@ const TimelineItemTitle = ({
         href={url || ""}
         target="_blank"
       >
-        {title} {company && `- ${company}`}{" "}
-        <BsArrowRightShort className="-rotate-45" size={20} />
+        <span>
+          {title} {company && `- ${company}`}
+        </span>{" "}
+        <BsArrowRightShort className="-rotate-45 shrink-0" size={20} />
       </Link>
     );
   if (company)

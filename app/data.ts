@@ -2,9 +2,9 @@ import { IDevData, ITimelineData } from "./lib/types/data";
 
 export const Dev: IDevData = {
   name: "Justine Upano",
-  title: "ReactJS Developer",
+  title: "Software Developer",
   description:
-    "Hi, I'm Justine. I'm deeply passionate about ReactJS, driven by the art of creating interfaces that users will not only find easy to use but will genuinely enjoy navigating through effortlessly.",
+    "Hi, I'm Justine, software developer with a profound passion for creating user interfaces that are not only intuitive but also delightful to navigate. Over the past year, I've been working with ReactJS as a full-time developer.",
 };
 
 export const WorkExperience: ITimelineData[] = [

@@ -68,13 +68,13 @@ export default function Home() {
 
   return (
     <>
-      {/* <PortalModal isOpen={openPortal} closePortal={onClosePortal} /> */}
+      <PortalModal isOpen={openPortal} closePortal={onClosePortal} />
       <main
         className={`MainWrapper relative flex justify-center w-full ${
           openPortal ? "blur-sm" : ""
         }`}
       >
-        {/* {!openPortal && <LookButton onOpenPortal={onOpenPortal} />} */}
+        {!openPortal && <LookButton onOpenPortal={onOpenPortal} />}
         <div className="Main flex flex-col gap-8 w-1/3 mt-24 mb-24">
           <div className="Profile">
             <Heading type="h1" bold>
@@ -89,7 +89,7 @@ export default function Home() {
                 item.section !==
                 PortfolioSectionValue[PortfolioSection.PORTFOLIOS]
             )
-            .map((item, key) => {
+            ?.map((item, key) => {
               return (
                 <div key={key}>
                   <Timeline
