@@ -5,6 +5,7 @@ import Card from "../card";
 import { ReactNode } from "react";
 import Link from "next/link";
 import { BsArrowRightShort } from "react-icons/bs";
+import React from "react";
 
 interface ITimelineProps {
   title?: ReactNode;

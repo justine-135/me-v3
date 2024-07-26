@@ -25,20 +25,6 @@ const Overlay = () => {
   );
 };
 
-const ThumbsUpButton = ({ onClosePortal }: { onClosePortal: () => void }) => {
-  return (
-    <button className="absolute right-0" onClick={onClosePortal}>
-      <Image
-        alt="black dog thumbs up Sticker by 157ofgemma"
-        src="/images/dog_thumbs_up.webp"
-        unoptimized
-        width={220}
-        height={220}
-      />
-    </button>
-  );
-};
-
 interface IPrevPortfolio {
   src: string;
   alt: string;

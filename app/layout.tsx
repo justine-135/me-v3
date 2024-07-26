@@ -1,13 +1,20 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import React from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Justine Upano | Developer",
   description:
-    "Passionate developer specializing in crafting elegant and functional web applications. Skilled in ReactJS, JavaScript, and creating intuitive user experiences. Explore my portfolio to see projects that showcase my dedication to clean code and innovative solutions.",
+    "Discover my journey to becoming a professional developer. Explore key milestones, projects, and how my skills have evolved over time.",
+  applicationName: "Portfolio blog",
+  authors: [{ name: "Justine Upano" }],
+  keywords: [
+    "portfolio, my, developer, page, reactjs, nextjs, typescript, javascript, tailwind, justine upano",
+  ],
+  creator: "Justine Upano",
 };
 
 export default function RootLayout({

@@ -1,25 +1,25 @@
 "use client";
 
 import Image from "next/image";
-import { Dev, Projects, Socials, WorkExperience } from "../data";
+import { Dev } from "../data";
 import Heading from "./typography/heading";
 import Card from "./card";
 import { Timeline } from "./layout/timeline";
 import Text from "./typography/text";
-import PortalModal from "./portal-modal";
 import { useEffect, useState } from "react";
 import { FaComment } from "react-icons/fa6";
-import { ITimelineData } from "../lib/types/data";
 import useDataSWR from "../lib/hook/useDataSWR";
 import { PortfolioSection } from "../lib/enums/data";
 import { PortfolioSectionValue } from "../lib/constants/data";
-import { motion } from "framer-motion";
+import React from "react";
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const LookButton = ({ onOpenPortal }: { onOpenPortal: () => void }) => {
   const [showMessage, setShowMessage] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
+      console.log("asd");
       setShowMessage((prev) => !prev);
     }, 6000);
 
@@ -49,32 +49,32 @@ const LookButton = ({ onOpenPortal }: { onOpenPortal: () => void }) => {
 };
 
 export default function Home() {
-  const [openPortal, setOpenPortal] = useState<boolean>(false);
+  // const [openPortal, setOpenPortal] = useState<boolean>(false);
   const { name, title, description } = Dev;
 
   const { data, isLoading } = useDataSWR();
 
-  const onOpenPortal = () => {
-    setOpenPortal(true);
-    document.body.style.overflow = "hidden";
-  };
+  // const onOpenPortal = () => {
+  //   setOpenPortal(true);
+  //   document.body.style.overflow = "hidden";
+  // };
 
-  const onClosePortal = () => {
-    setOpenPortal(false);
-    document.body.style.overflow = "auto";
-  };
+  // const onClosePortal = () => {
+  //   setOpenPortal(false);
+  //   document.body.style.overflow = "auto";
+  // };
+
+  // const dynamicWrapperClassName = `MainWrapper relative flex justify-center w-full ${
+  //   openPortal ? "blur-sm" : ""
+  // }`;
 
   if (isLoading) return "Loading";
 
   return (
     <>
-      <PortalModal isOpen={openPortal} closePortal={onClosePortal} />
-      <main
-        className={`MainWrapper relative flex justify-center w-full ${
-          openPortal ? "blur-sm" : ""
-        }`}
-      >
-        {!openPortal && <LookButton onOpenPortal={onOpenPortal} />}
+      {/* <PortalModal isOpen={openPortal} closePortal={onClosePortal} /> */}
+      <main className="MainWrapper relative flex justify-center w-full ">
+        {/* {!openPortal && <LookButton onOpenPortal={onOpenPortal} />} */}
         <div className="Main flex flex-col gap-8 w-1/3 mt-24 mb-24">
           <div className="Profile">
             <Heading type="h1" bold>

@@ -9,6 +9,7 @@ interface Props {
 }
 
 export default function Text({ children, type = "default", className }: Props) {
+  // NOTE: Can be enhanced
   const textStyle = type === "default" ? "opacity-70" : "opacity-50";
 
   return <p className={clsx(`text-sm ${className}`, textStyle)}>{children}</p>;

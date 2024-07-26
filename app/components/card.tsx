@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import Text from "./typography/text";
 import Image from "next/image";
+import React from "react";
 
 interface Props {
   className?: string;

@@ -1,6 +1,5 @@
 import React from "react";
 import { HeadingType } from "../../lib/types/text";
-import clsx from "clsx";
 
 interface Props {
   className?: string;
