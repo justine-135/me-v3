@@ -1,17 +1,19 @@
 "use client";
 
 import Image from "next/image";
-import { Dev } from "../data";
-import Heading from "./typography/heading";
-import Card from "./card";
-import { Timeline } from "./layout/timeline";
-import Text from "./typography/text";
+
 import { useEffect, useState } from "react";
 import { FaComment } from "react-icons/fa6";
-import useDataSWR from "../lib/hook/useDataSWR";
-import { PortfolioSection } from "../lib/enums/data";
-import { PortfolioSectionValue } from "../lib/constants/data";
+
 import React from "react";
+import { Dev } from "@/app/data";
+import Heading from "../typography/heading";
+import Card from "../card";
+import { PortfolioSectionValue } from "@/app/lib/constants/data";
+import { PortfolioSection } from "@/app/lib/enums/data";
+import { Timeline } from "../layout/timeline";
+import Text from "../typography/text";
+import { PortfolioSections } from "@/app/lib/types/data";
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const LookButton = ({ onOpenPortal }: { onOpenPortal: () => void }) => {
@@ -48,11 +50,8 @@ const LookButton = ({ onOpenPortal }: { onOpenPortal: () => void }) => {
   );
 };
 
-export default function Home() {
-  // const [openPortal, setOpenPortal] = useState<boolean>(false);
+export default function Content({ data }: { data?: PortfolioSections[] }) {
   const { name, title, description } = Dev;
-
-  const { data, isLoading } = useDataSWR();
 
   // const onOpenPortal = () => {
   //   setOpenPortal(true);
@@ -67,8 +66,6 @@ export default function Home() {
   // const dynamicWrapperClassName = `MainWrapper relative flex justify-center w-full ${
   //   openPortal ? "blur-sm" : ""
   // }`;
-
-  if (isLoading) return "Loading";
 
   return (
     <>
