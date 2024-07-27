@@ -24,9 +24,9 @@ interface ITimelineItemTitleProps {
 }
 
 const TimelineLabel = ({ timeFrom, timeTo }: ITimelineLabelProps) => {
-  if (!timeTo) return <Text>{timeFrom}</Text>;
+  if (!timeTo) return <Text type="tag">{timeFrom}</Text>;
   return (
-    <Text>
+    <Text type="tag">
       {timeFrom} - {timeTo}
     </Text>
   );
@@ -63,12 +63,12 @@ export const Timeline = ({ title, dataSource }: ITimelineProps) => {
   return (
     <div>
       {title}
-      <ul className="TimelineContent flex flex-col gap-8 mt-8">
+      <ul className="TimelineContent flex flex-col gap-8 mt-2 md:mt-4">
         {dataSource?.map((timeline) => {
           return (
             <li key={timeline.id}>
-              <div className="flex">
-                <div className="min-w-36">
+              <div className="flex flex-col md:flex-row">
+                <div className="mb-2 md:mb-0 min-w-36">
                   <TimelineLabel
                     timeFrom={timeline?.label1}
                     timeTo={timeline?.label2}

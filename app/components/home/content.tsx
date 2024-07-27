@@ -72,14 +72,14 @@ export default function Content({ data }: { data?: PortfolioSections[] }) {
       {/* <PortalModal isOpen={openPortal} closePortal={onClosePortal} /> */}
       <main className="MainWrapper relative flex justify-center w-full ">
         {/* {!openPortal && <LookButton onOpenPortal={onOpenPortal} />} */}
-        <div className="Main flex flex-col gap-8 w-1/3 mt-24 mb-24">
+        <div className="Main flex flex-col gap-6 md:gap-16 w-4/5 md:w-1/3 my-12 md:my-24">
           <div className="Profile">
             <Heading type="h1" bold>
               {name}
             </Heading>
             <Text>{title}</Text>
           </div>
-          <Card title={<Heading bold>About</Heading>} body={description} />
+          <Card title={<Heading>About</Heading>} body={description} />
           {data
             ?.filter(
               (item) =>
@@ -91,9 +91,7 @@ export default function Content({ data }: { data?: PortfolioSections[] }) {
                 <div key={key}>
                   <Timeline
                     title={
-                      <Heading bold className="capitalize">
-                        {item.section}
-                      </Heading>
+                      <Heading className="capitalize">{item.section}</Heading>
                     }
                     dataSource={item.result}
                   />

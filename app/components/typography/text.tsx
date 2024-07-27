@@ -1,6 +1,5 @@
 import React from "react";
 import { TextType } from "@/app/lib/types/text";
-import clsx from "clsx";
 
 interface Props {
   children: React.ReactNode;
@@ -9,8 +8,13 @@ interface Props {
 }
 
 export default function Text({ children, type = "default", className }: Props) {
-  // NOTE: Can be enhanced
-  const textStyle = type === "default" ? "opacity-70" : "opacity-50";
+  const commonStyle = "text-xs md:text-sm";
 
-  return <p className={clsx(`text-sm ${className}`, textStyle)}>{children}</p>;
+  if (type === "tag") {
+    return (
+      <p className={`${className} opacity-40 ${commonStyle}`}>{children}</p>
+    );
+  }
+
+  return <p className={`${className} opacity-70 ${commonStyle}`}>{children}</p>;
 }

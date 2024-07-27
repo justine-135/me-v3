@@ -15,6 +15,13 @@ export const metadata: Metadata = {
     "portfolio, my, developer, page, reactjs, nextjs, typescript, javascript, tailwind, justine upano",
   ],
   creator: "Justine Upano",
+  icons: {
+    icon: "/icons/icon.png",
+    apple: "/icons/icon.png",
+    other: [
+      { rel: "icon", type: "image/png", url: "/icons/icon.png" }, // SVG as favicon
+    ],
+  },
 };
 
 export default function RootLayout({

@@ -17,7 +17,7 @@ export default function Heading({
   if (type === "h1")
     return (
       <h1
-        className={`text-2xl ${
+        className={`text-lg md:text-2xl ${
           bold ? "font-bold" : "font-medium"
         } ${className}`}
       >
@@ -26,7 +26,9 @@ export default function Heading({
     );
   return (
     <h2
-      className={`text-sm ${bold ? "font-bold" : "font-medium"} ${className}`}
+      className={`text-xs md:text-sm ${
+        bold ? "font-bold" : "font-medium"
+      } ${className}`}
     >
       {children}
     </h2>
