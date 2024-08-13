@@ -1,6 +1,5 @@
 import { ITimelineData } from "@/app/lib/types/data";
 import Text from "../typography/text";
-import Heading from "../typography/heading";
 import Card from "../card";
 import { ReactNode } from "react";
 import Link from "next/link";
@@ -40,7 +39,7 @@ const TimelineItemTitle = ({
   if (url)
     return (
       <Link
-        className="flex items-center gap-1 hover:underline"
+        className="flex gap-1 hover:underline"
         href={url || ""}
         target="_blank"
       >
@@ -77,22 +76,22 @@ export const Timeline = ({ title, dataSource }: ITimelineProps) => {
                 <div>
                   <Card
                     title={
-                      <Heading className="flex">
+                      <Text className="flex opacity-90">
                         <TimelineItemTitle
                           title={timeline.title}
                           url={timeline?.url}
                           company={timeline?.company}
                         />
-                      </Heading>
+                      </Text>
                     }
                     body={timeline?.description}
                     icon={timeline?.image_url}
                   />
                   {timeline?.tags && (
-                    <ul className="Tags flex mt-2 flex-wrap list-disc">
+                    <ul className="Tags flex mt-2 flex-wrap">
                       {timeline?.tags?.map((tag, key) => {
                         return (
-                          <li key={key} className="ml-4 mr-4">
+                          <li key={key} className="mr-4">
                             <Text type="tag">{tag}</Text>
                           </li>
                         );

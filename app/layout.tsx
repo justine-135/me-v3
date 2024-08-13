@@ -16,10 +16,10 @@ export const metadata: Metadata = {
   ],
   creator: "Justine Upano",
   icons: {
-    icon: "/icons/icon.png",
-    apple: "/icons/icon.png",
+    icon: "/icons/blob.svg",
+    apple: "/icons/blob.svg",
     other: [
-      { rel: "icon", type: "image/png", url: "/icons/icon.png" }, // SVG as favicon
+      { rel: "icon", type: "svg", url: "/icons/blob.svg" }, // SVG as favicon
     ],
   },
 };

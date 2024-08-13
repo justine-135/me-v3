@@ -3,11 +3,13 @@ import axios from "axios";
 import { PortfolioSections } from "../types/data";
 
 const fetcher = async (url: string) => {
-  const res = await axios.get(url).then(function (response) {
-    return response.data;
-  });
-
-  return res;
+  try {
+    const res = await axios.get(url);
+    return res.data;
+  } catch (error) {
+    console.error("Fetching error:", error);
+    throw error; // Re-throw the error for SWR to handle
+  }
 };
 
 export default function useDataSWR() {
@@ -17,7 +19,12 @@ export default function useDataSWR() {
     isValidating: isLoading,
   } = useSWR<PortfolioSections[]>(
     "https://justine-135.github.io/me-api/data.json",
-    fetcher
+    fetcher,
+    {
+      revalidateOnFocus: false,
+      revalidateOnReconnect: false,
+      refreshInterval: 0,
+    }
   );
 
   return {
