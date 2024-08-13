@@ -11,7 +11,13 @@ interface Props {
   tags?: ReactNode;
 }
 
-export default function Card({ className, icon, title, body, tags }: Props) {
+export default function Card({
+  className = "",
+  icon,
+  title,
+  body,
+  tags,
+}: Props) {
   return (
     <div className={`Card flex flex-col gap-2 ${className}`}>
       {icon && (
@@ -23,9 +29,9 @@ export default function Card({ className, icon, title, body, tags }: Props) {
         />
       )}
 
-      {title}
-      <Text>{body}</Text>
-      {tags}
+      {title && title}
+      {body && <Text>{body}</Text>}
+      {tags && tags}
     </div>
   );
 }

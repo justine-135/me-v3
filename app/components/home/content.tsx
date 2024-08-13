@@ -10,7 +10,7 @@ import { PortfolioSections } from "@/app/lib/types/data";
 
 const TimelineSections = ({ data }: { data?: PortfolioSections[] }) => {
   return (
-    <div>
+    <div className="TimelineSections flex flex-col gap-6">
       {data
         ?.filter(
           (item) =>
@@ -35,7 +35,7 @@ export default function Content({ data }: { data?: PortfolioSections[] }) {
 
   return (
     <main className="MainWrapper relative flex justify-center w-full ease-in">
-      <div className="Main flex flex-col gap-6 md:gap-12 w-4/5 md:w-1/3 my-12 md:my-24">
+      <div className="Main flex flex-col gap-6 w-4/5 md:w-1/3 my-12 md:my-24">
         <div className="Profile">
           <Heading type="h1" bold>
             {name}

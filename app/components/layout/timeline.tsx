@@ -63,7 +63,7 @@ export const Timeline = ({ title, dataSource }: ITimelineProps) => {
   return (
     <div>
       {title}
-      <ul className="TimelineContent flex flex-col gap-8 mt-2 md:mt-4">
+      <ul className="TimelineContent flex flex-col gap-4 mt-2 md:mt-4">
         {dataSource?.map((timeline) => {
           return (
             <li key={timeline.id}>
@@ -88,15 +88,17 @@ export const Timeline = ({ title, dataSource }: ITimelineProps) => {
                     body={timeline?.description}
                     icon={timeline?.image_url}
                   />
-                  <ul className="Tags flex mt-2 flex-wrap list-disc">
-                    {timeline?.tags?.map((tag, key) => {
-                      return (
-                        <li key={key} className="ml-4 mr-4">
-                          <Text type="tag">{tag}</Text>
-                        </li>
-                      );
-                    })}
-                  </ul>
+                  {timeline?.tags && (
+                    <ul className="Tags flex mt-2 flex-wrap list-disc">
+                      {timeline?.tags?.map((tag, key) => {
+                        return (
+                          <li key={key} className="ml-4 mr-4">
+                            <Text type="tag">{tag}</Text>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  )}
                 </div>
               </div>
             </li>
