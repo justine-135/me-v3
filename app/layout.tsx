@@ -1,14 +1,17 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Fira_Sans } from "next/font/google";
 import "./globals.css";
 import React from "react";
 
-const inter = Inter({ subsets: ["latin"] });
+const roboto = Fira_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "800"],
+});
 
 export const metadata: Metadata = {
   title: "Justine Upano | Developer",
   description:
-    "Discover my journey to becoming a professional developer. Explore key milestones, projects, and how my skills have evolved over time.",
+    "Building things that meet user needs, and drive meaningful engagement. ReactJS Developer at New Stars Solutions Inc.",
   applicationName: "Portfolio blog",
   authors: [{ name: "Justine Upano" }],
   keywords: [
@@ -31,7 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={roboto.className}>{children}</body>
     </html>
   );
 }
