@@ -21,9 +21,7 @@ export const metadata: Metadata = {
   icons: {
     icon: "/icons/blob.svg",
     apple: "/icons/blob.svg",
-    other: [
-      { rel: "icon", type: "svg", url: "/icons/blob.svg" }, // SVG as favicon
-    ],
+    other: [{ rel: "icon", type: "svg", url: "/icons/blob.svg" }],
   },
 };
 
