@@ -13,7 +13,7 @@ export default function Body({ children }: { children: ReactNode }) {
   const pageTitle = router.replace(/\//g, "").replace(/-/g, " ");
 
   return (
-    <section className="LayoutBody my-6 py-6 border-t-[1px] border-b-[1px] border-gray-700">
+    <article className="LayoutBody my-6 py-6 border-t-[1px] border-b-[1px] border-gray-700">
       {!isHomePage && (
         <Link className="flex items-center underline mb-2" href="/">
           <Text type="tag">Back</Text>
@@ -25,6 +25,6 @@ export default function Body({ children }: { children: ReactNode }) {
         </Heading>
       )}
       {children}
-    </section>
+    </article>
   );
 }

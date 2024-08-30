@@ -7,7 +7,7 @@ import { BsArrowRightShort } from "react-icons/bs";
 interface Props {
   title: string;
   titleLink?: string;
-  subtitle?: string;
+  subtitle?: ReactNode;
   subtitle2?: string;
   children: ReactNode;
 }
@@ -31,7 +31,7 @@ export const InfoPanel = ({
             title
           )}
         </Heading>
-        <Heading type="h3">{subtitle}</Heading>
+        <Text>{subtitle}</Text>
         <Text type="tag">{subtitle2}</Text>
       </div>
       <div className="Content space-y-2">{children}</div>

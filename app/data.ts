@@ -73,23 +73,65 @@ export const Education: SectionDetailArrList[] = [
   {
     title:
       "Bachelor of Engineering Technology in Computer Engineering Technology",
-    subtitle: "Technological University of the Philippines - Cavite campus",
-    year: "2019-2023",
+    subtitle:
+      "<a href='https://www.tupcavite.edu.ph/' target='_blank'><u>Technological University of the Philippines</u></a>",
+    year: "2018-2023",
     detail: [
       {
         type: 1,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias officiis aperiam sapiente, architecto tenetur quasi unde incidunt adipisci voluptas perferendis asperiores autem esse, molestiae aspernatur fugit? Quae sequi assumenda maiores!",
+        text: "Before starting college, my primary focus was on hardware. I enjoyed delving into electronics, from crafting simple circuits with breadboards to advancing to more complex projects using basic hardware description languages and Arduino technology.",
+      },
+      {
+        type: 1,
+        text: "After a few years of college, I was introduced to web and mobile app development. What began as a simple curiosity quickly grew into a deep interest. I became excited about learning different programming languages, frameworks, and how web applications are built and work.",
+      },
+      {
+        type: 1,
+        text: "Some of the notable projects I contributed to:",
+      },
+      {
+        type: 2,
+        text: "<a href='https://github.com/justine-135/Tupc-Ecafeteria-Php-Ver' target='_blank'><u>TUPC E-cafeteria</u></a> - As part of my final project in the web application development program, our team designed a digital food ordering system for the TUPC campus canteen. This system utilized a touchscreen interface, allowing customers to easily select and place their orders.",
+      },
+      {
+        type: 2,
+        text: "<a href='https://github.com/justine-135/dadz-grill-thesis' target='_blank'><u>Dad'z grillhouse</u></a> - To complete the final requirement of my course, our team must find a solution to a particular institution or business. With our knowledge in digitizing a manual ordering system, we decided to enhance our previous system and apply it to a local <i>samgyupsal</i> restaurant.",
+      },
+      {
+        type: 2,
+        text: "<a href='https://github.com/justine-135/cpet17-finals' target='_blank'><u>Motion capture</u></a> - In one of our projects during the second web development program, we used Python libraries to capture and analyze motion detected by a live camera feed.",
+      },
+      {
+        type: 2,
+        text: "<a href='https://github.com/justine-135/School-record-management-system' target='_blank'><u>School record management system</u></a> - As interns at a local school, we developed a system for recording student information. This tool allows teachers to input and manage students' grades and scores, as well as enroll both new and returning students.",
       },
     ],
   },
   {
     title: "Science, Technology, Engineering, and Mathematics",
-    subtitle: "University of Perpetual Help System Dalta - Molino campus",
+    subtitle:
+      "<a href='https://perpetualdalta.edu.ph/molino-2/' target='_blank'><u>University of Perpetual Help System Dalta</u></a>",
     year: "2016-2018",
     detail: [
       {
         type: 1,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias officiis aperiam sapiente, architecto tenetur quasi unde incidunt adipisci voluptas perferendis asperiores autem esse, molestiae aspernatur fugit? Quae sequi assumenda maiores!",
+        text: "I chose this program because it closely aligns with my interest in technology. Additionally, it features my favorite subject, mathematics, which further motivated me to enroll. The combination of technology and mathematics in the curriculum made it an ideal fit for my academic and career goals.",
+      },
+      {
+        type: 1,
+        text: "Some of the important things I learned that helped me as a developer:",
+      },
+      {
+        type: 2,
+        text: "Discovered the World Wide Web (WWW) for the first time during a technology class. Gained an understanding of how the global network connects diverse websites and information. This experience deepened my interest in web technologies and their impact on modern communication.",
+      },
+      {
+        type: 2,
+        text: "Completed my first subject in creating a simple website. Initially learned how to program HTML, CSS, and slight Javascript, focusing only on the UI and less on logic. Created projects like simple blogs, and portfolio websites.",
+      },
+      {
+        type: 2,
+        text: "Gained experience in diagnosing and troubleshooting computer issues. Developed skills in identifying hardware and software problems, and implementing effective solutions. This hands-on experience enhanced my problem-solving abilities and technical knowledge.",
       },
     ],
   },

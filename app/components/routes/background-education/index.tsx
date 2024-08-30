@@ -5,16 +5,21 @@ import { Education } from "@/app/data";
 
 export default function BackgroundEducation() {
   return (
-    <div className="space-y-6">
+    <section className="space-y-6">
       <Text>
-        This section outlines my journey from studying web development in
-        college to building real-world experience through freelancing and
-        internships. Each step along the way has contributed to my growth as a
-        web developer, leading to my first role as a frontend developer.
-        Here&apos;s a summary of my professional experiences and the skills
-        I&apos;ve gained through these opportunities.
+        I&apos;ve always been fascinated by technology, a passion that began in
+        high school while playing video games with classmates, friends, and
+        family. I was initially interested by how computer hardware could run
+        various programs and games, which sparked a deeper curiosity about
+        hardware, particularly GPUs (graphics processing units).
+      </Text>
+      <Text>
+        This interest drove me to pursue courses and programs in this field,
+        ultimately leading to the completion of my bachelor&apos;s degree. My
+        ongoing curiosity and enthusiasm for technology have been key factors in
+        my academic and professional journey.
       </Text>
       <InfoList arr={Education} />
-    </div>
+    </section>
   );
 }
