@@ -4,8 +4,8 @@ interface DetailInfo {
 }
 
 export interface SectionDetailArrList {
-  title: string;
+  title?: string;
   subtitle?: string;
-  year: string;
+  year?: string;
   detail: DetailInfo[];
 }

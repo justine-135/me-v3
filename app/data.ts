@@ -1,8 +1,84 @@
 import { SectionDetailArrList } from "./lib/types/infoList";
 
+export const About: SectionDetailArrList[] = [
+  {
+    title: "About me",
+    detail: [
+      {
+        type: 1,
+        text: "I am a recent graduate with a degree in <b>Computer Engineering Technology</b> from the <a href='https://www.tupcavite.edu.ph/' target='_blank'><u>Technological University of the Philippines</u></a>, where I led three successful projects across different programs. My academic journey included <b>web development</b>, <b>research</b>, and an <b>internship</b>, all of which honed my skills and prepared me for real-world challenges",
+      },
+      {
+        type: 1,
+        text: "Currently, I am a ReactJS Developer at Newstars Solutions Inc., where I've been working for the past year. My role involves building features for web solutions, such as post and comment systems with timeline updates. I am also a member of the code review team, ensuring our coding standards are maintained",
+      },
+      {
+        type: 1,
+        text: "My standout skills are:",
+      },
+      {
+        type: 2,
+        text: "Easily resolving bugs in code I haven’t seen before",
+      },
+      {
+        type: 2,
+        text: "Being able to solve, and communicate complex problems with a clear mind",
+      },
+      {
+        type: 2,
+        text: "A genuine willingness to accept feedback when I’m at fault",
+      },
+      {
+        type: 2,
+        text: "Implementing efficient solutions under tight deadlines",
+      },
+      {
+        type: 2,
+        text: "Being able to learn new things quickly",
+      },
+      {
+        type: 2,
+        text: "Collaborating effectively with team members",
+      },
+      {
+        type: 2,
+        text: "Maintaining attention to detail while managing multiple tasks",
+      },
+      {
+        type: 1,
+        text: "In terms of my technical expertise, my areas of expertise includes: <b>fundamentals of programming, data structures and algorithms, web development, REST APIs, and using frameworks and libraries</b>.",
+      },
+      {
+        type: 1,
+        text: "My philosophy is centered around the idea that achieving perfection involves eliminating the unnecessary rather than adding more complexity. Outside of work, I enjoy gaming, coding, and occasionally socializing over a drink",
+      },
+    ],
+  },
+  {
+    title: "What are the things I look for in a role",
+    detail: [
+      {
+        type: 1,
+        text: "asd",
+      },
+    ],
+  },
+];
+
 export const Works: SectionDetailArrList[] = [
   {
+    title: "Work experience",
+    detail: [
+      {
+        type: 1,
+        text: "Over the years, I transitioned to working on more complex corporate web systems, contributing to large-scale applications and enterprise-level solutions. My work spans a range of projects, from initial client briefs to advanced corporate systems, always focused on delivering clean, efficient, and user-friendly designs.",
+      },
+    ],
+  },
+  {
     title: "ReactJS Developer",
+    subtitle:
+      "<a href='https://newstarsinc.com/' target='_blank'><u>Newstars Solutions Inc.</u></a>",
     year: "Present",
     detail: [
       {
@@ -13,19 +89,21 @@ export const Works: SectionDetailArrList[] = [
   },
   {
     title: "Internship",
+    subtitle:
+      "<a href='https://sabes.depeddasma.edu.ph/' target='_blank'><u>Sabang Elementary School</u></a>",
     year: "2023",
     detail: [
       {
         type: 1,
-        text: "As part of my practical experience, I undertook an internship for the fulfillment of the final requirement of my course as a <u>computer engineer technologist</u> at a local elementaryschool. During this internship, I played a key role in developing a web application called &quot;Student record system&quot; for the school.",
+        text: "As part of my practical experience, I undertook an internship for the fulfillment of the final requirement of my course as a <b>computer engineer technologist</b> at a local elementary school. During this internship, I played a key role in developing a web application called <a href='https://github.com/justine-135/School-record-management-system' target='_blank'><u>School record management system</u></a>.",
       },
       {
         type: 2,
-        text: "Involved in doing research, and interviews with teachers and staffs to determine what problem to solve",
+        text: "Involved in doing <i>research</i>, and <i>interviews</i> with teachers and staffs to determine what problem to solve",
       },
       {
         type: 2,
-        text: "Was assigned as a lead developer, responsible for developing the functionalities of the system",
+        text: "Was assigned as a <i>lead developer</i>, responsible for developing the functionalities of the system",
       },
       {
         type: 2,
@@ -71,6 +149,19 @@ export const Works: SectionDetailArrList[] = [
 
 export const Education: SectionDetailArrList[] = [
   {
+    title: "Background of education",
+    detail: [
+      {
+        type: 1,
+        text: "I've always been fascinated by technology, a passion that began in high school while playing video games with classmates, friends, and family. I was initially interested by how computer hardware could run various programs and games, which sparked a deeper curiosity about hardware, particularly GPUs (graphics processing units).",
+      },
+      {
+        type: 1,
+        text: "This interest drove me to pursue courses and programs in this field, ultimately leading to the completion of my bachelor's degree. My ongoing curiosity and enthusiasm for technology have been key factors in my academic and professional journey.",
+      },
+    ],
+  },
+  {
     title:
       "Bachelor of Engineering Technology in Computer Engineering Technology",
     subtitle:
@@ -91,11 +182,11 @@ export const Education: SectionDetailArrList[] = [
       },
       {
         type: 2,
-        text: "<a href='https://github.com/justine-135/Tupc-Ecafeteria-Php-Ver' target='_blank'><u>TUPC E-cafeteria</u></a> - As part of my final project in the web application development program, our team designed a digital food ordering system for the TUPC campus canteen. This system utilized a touchscreen interface, allowing customers to easily select and place their orders.",
+        text: "<a href='https://github.com/justine-135/Tupc-Ecafeteria-Php-Ver' target='_blank'><u>TUPC E-cafeteria</u></a> - As part of my final project in the web application development program, our team designed a digital food ordering system for the TUPC campus canteen. This system utilized a touchscreen interface, allowing customers to easily select and place their orders",
       },
       {
         type: 2,
-        text: "<a href='https://github.com/justine-135/dadz-grill-thesis' target='_blank'><u>Dad'z grillhouse</u></a> - To complete the final requirement of my course, our team must find a solution to a particular institution or business. With our knowledge in digitizing a manual ordering system, we decided to enhance our previous system and apply it to a local <i>samgyupsal</i> restaurant.",
+        text: "<a href='https://github.com/justine-135/dadz-grill-thesis' target='_blank'><u>Dad'z grillhouse</u></a> - To complete the final requirement of my course, our team must find a solution to a particular institution or business. With our knowledge in digitizing a manual ordering system, we decided to enhance our previous system and apply it to a local <i>samgyupsal</i> restaurant",
       },
       {
         type: 2,
@@ -103,7 +194,7 @@ export const Education: SectionDetailArrList[] = [
       },
       {
         type: 2,
-        text: "<a href='https://github.com/justine-135/School-record-management-system' target='_blank'><u>School record management system</u></a> - As interns at a local school, we developed a system for recording student information. This tool allows teachers to input and manage students' grades and scores, as well as enroll both new and returning students.",
+        text: "<a href='https://github.com/justine-135/School-record-management-system' target='_blank'><u>School record management system</u></a> - As interns at a local school, we developed a system for recording student information. This tool allows teachers to input and manage students' grades and scores, as well as enroll both new and returning students",
       },
     ],
   },
@@ -123,15 +214,15 @@ export const Education: SectionDetailArrList[] = [
       },
       {
         type: 2,
-        text: "Discovered the World Wide Web (WWW) for the first time during a technology class. Gained an understanding of how the global network connects diverse websites and information. This experience deepened my interest in web technologies and their impact on modern communication.",
+        text: "Discovered the World Wide Web (WWW) for the first time during a technology class. Gained an understanding of how the global network connects diverse websites and information. This experience deepened my interest in web technologies and their impact on modern communication",
       },
       {
         type: 2,
-        text: "Completed my first subject in creating a simple website. Initially learned how to program HTML, CSS, and slight Javascript, focusing only on the UI and less on logic. Created projects like simple blogs, and portfolio websites.",
+        text: "Completed my first subject in creating a simple website. Initially learned how to program HTML, CSS, and slight Javascript, focusing only on the UI and less on logic. Created projects like simple blogs, and portfolio websites",
       },
       {
         type: 2,
-        text: "Gained experience in diagnosing and troubleshooting computer issues. Developed skills in identifying hardware and software problems, and implementing effective solutions. This hands-on experience enhanced my problem-solving abilities and technical knowledge.",
+        text: "Gained experience in diagnosing and troubleshooting computer issues. Developed skills in identifying hardware and software problems, and implementing effective solutions. This hands-on experience enhanced my problem-solving abilities and technical knowledge",
       },
     ],
   },
@@ -185,8 +276,8 @@ export const Socials = [
   {
     id: 3,
     title: "LinkedIn",
-    url: "mailto:justineupano87@gmail.com",
-    username: "justineupano87@gmail.com",
+    url: "https://ph.linkedin.com/in/justineupano",
+    username: "justineupano",
   },
 ];
 

@@ -1,11 +1,10 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import Text from "../typography/text";
 import Link from "next/link";
 import { Routes } from "@/app/data";
 
 export default function Home() {
-  const [isHover, setIsHover] = useState<number | null>(null);
   return (
     <div className="space-y-8">
       <div>
@@ -30,19 +29,9 @@ export default function Home() {
           return (
             <li key={route.id}>
               <Text className="flex items-center gap-6">
-                <Link
-                  className="underline"
-                  href={route.path}
-                  onMouseEnter={() => setIsHover(route.id)}
-                  onMouseOut={() => setIsHover(null)}
-                >
+                <Link className="underline" href={route.path}>
                   {route.title}
                 </Link>
-                {isHover === route.id && (
-                  <span className="relative flex h-2 w-2">
-                    <span className="relative inline-flex rounded-full h-2 w-2 bg-sky-500"></span>
-                  </span>
-                )}
               </Text>
             </li>
           );

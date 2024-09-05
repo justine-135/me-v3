@@ -5,7 +5,7 @@ import Link from "next/link";
 import { BsArrowRightShort } from "react-icons/bs";
 
 interface Props {
-  title: string;
+  title?: string;
   titleLink?: string;
   subtitle?: ReactNode;
   subtitle2?: string;

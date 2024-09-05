@@ -15,8 +15,8 @@ export const InfoList = ({ arr }: Props) => {
         return (
           <li key={key}>
             <InfoPanel
-              title={item.title}
-              subtitle={item.subtitle}
+              title={item?.title}
+              subtitle={item?.subtitle}
               subtitle2={item.year}
             >
               <ul className="Details space-y-2">
@@ -25,7 +25,7 @@ export const InfoList = ({ arr }: Props) => {
                     <li
                       className={`${
                         detail?.type === WorkListType.LIST
-                          ? "list-disc ml-5"
+                          ? "list-disc ml-8"
                           : ""
                       }`}
                       key={key}

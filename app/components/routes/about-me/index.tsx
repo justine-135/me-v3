@@ -1,11 +1,11 @@
 import React from "react";
-import { Works } from "@/app/data";
 import { InfoList } from "../../infoList";
+import { About } from "@/app/data";
 
-export default function WorkExperience() {
+export default function AboutMe() {
   return (
     <section className="space-y-6">
-      <InfoList arr={Works} />
+      <InfoList arr={About} />
     </section>
   );
 }
