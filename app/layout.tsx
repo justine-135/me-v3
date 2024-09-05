@@ -2,10 +2,14 @@ import type { Metadata } from "next";
 import { Fira_Sans } from "next/font/google";
 import "./globals.css";
 import React from "react";
+import Header from "./components/layout/header";
+import Body from "./components/layout/body";
+import Footer from "./components/layout/footer";
+import Wrapper from "./components/layout/wrapper";
 
 const roboto = Fira_Sans({
   subsets: ["latin"],
-  weight: ["400", "500", "800"],
+  weight: ["300", "400", "500", "800"],
 });
 
 export const metadata: Metadata = {
@@ -32,7 +36,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={roboto.className}>{children}</body>
+      <body className={roboto.className}>
+        <Wrapper>
+          <Header />
+          <Body>{children}</Body>
+          <Footer />
+        </Wrapper>
+      </body>
     </html>
   );
 }
